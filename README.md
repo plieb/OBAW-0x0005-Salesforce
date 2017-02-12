@@ -1,5 +1,5 @@
-[logo]: https://github.com/plieb/dreamhouse-bot-messenger/blob/master/assets/SF_RE.png "Salesforce + Recast.AI"
-![alt text][logo]
+[logo]: https://github.com/plieb/OBAW-0x0005-Salesforce/blob/master/assets/OBAW%20-%20Week%200x0005.png "Salesforce + Recast.AI"
+![OBAW + Salesforce][logo]
 
 This bot is part of the #[OBAW](https://github.com/plieb/OBAW) project - Week 0x0005 - Salesforce
 
