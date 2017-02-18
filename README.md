@@ -3,6 +3,8 @@
 
 This bot is part of the #[OBAW](https://github.com/plieb/OBAW) project - Week 0x0005 - Salesforce
 
+Medium publication project page #[OBAW](https://medium.com/the-obaw-project)
+
 # Salesforce Bot for Facebook Messenger using Recast.AI
 
 A [Salesforce](https://www.salesforce.com)-powered bot for the [DreamHouse sample application](https://developer.salesforce.com/dreamhouse/) using [Recast.AI](https://recast.ai) NLP and [Bot Connector](https://botconnector.recast.ai)
