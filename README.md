@@ -1,11 +1,7 @@
-[logo]: https://github.com/plieb/OBAW-0x0005-Salesforce/blob/master/assets/OBAW%20-%20Week%200x0005.png "Salesforce + Recast.AI"
-![OBAW + Salesforce][logo]
+[logo]: https://github.com/plieb/dreamhouse-bot-messenger/blob/master/assets/SF_RE.png "Salesforce + Recast.AI"
+![alt text][logo]
 
-This bot is part of the #[OBAW Github](https://github.com/plieb/OBAW) project - Week 0x0005 - Salesforce
-
-Medium publication project page #[OBAW Medium](https://medium.com/the-obaw-project)
-
-Medium publication project Salesforce #[OBAW Salesforce](https://medium.com/the-obaw-project/obaw-project-week-0x0005-salesforce-8f4ffc46e548#)
+This bot is part of the #[OBAW](https://github.com/plieb/OBAW) project - Week 0x0005 - Salesforce
 
 # Salesforce Bot for Facebook Messenger using Recast.AI
 
@@ -60,12 +56,12 @@ If you haven't already done so, follow the steps below to create a Salesforce co
 1. Click the button **New Bot** and define the bot as follows
  
     - Bot Name: Salesforce Bot
-    - Bot URL: enter your Heroku URL + **/webhook/** (MY_HEROKU_URL.heroku.com/webhook)
+    - Bot URL: enter your Heroku URL
     
 1. In **Settings** find your `slug`, `token` and `bot ID`. Copy paste those values in the **Config Variables** section of your Heroku app to `BC_USER_SLUG`, `BC_USER_TOKEN` and `BC_BOT_ID`
 1. Get back to your Bot Connector account and add a Messenger channel. Give it a name and follow step 1 to 4 in order to get your **Secret Key** & **Page Token**
 
-## Step 5: Get your Recast.AI bot
+## Step 5: Get your Recast bot
 
 1. Make sure you are logged in to your [Recast.AI account](https://recast.ai/)
 1. Follow this link [Salesforce DreamHouse bot](https://recast.ai/pe/salesforce-dreamhouse/learn) and fork the bot to your account

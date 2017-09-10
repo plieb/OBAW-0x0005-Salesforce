@@ -1,14 +1,14 @@
 {
   "name": "messengerforce-recast",
   "version": "2.0.0",
-  "description": "Salesforce-pawered messenger bot with Recast.AI",
+  "description": "Salesforce-powered messenger bot with Recast.AI",
   "main": "index.js",
   "scripts": {
     "start": "node ./node_modules/babel-cli/bin/babel-node.js src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint ./src/*"
   },
-  "author": "Christophe Coenraets <ccoenraets@gmail.com> (http://coenraets.org/)",
+  "author": "Pierre-Edouard Lieb <pe@recast.ai> (https://recast.ai/)",
   "license": "ISC",
   "dependencies": {
     "babel-cli": "^6.11.4",
@@ -21,8 +21,7 @@
     "moment": "^2.13.0",
     "nforce": "^1.4.1",
     "numeral": "^1.5.3",
-    "recastai": "^2.3.0",
-    "recastai-botconnector": "^1.0.1",
+		"recastai": "^3.1.1",
     "request": "^2.71.0"
   },
   "devDependencies": {
