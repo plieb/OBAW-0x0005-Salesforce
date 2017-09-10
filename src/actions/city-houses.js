@@ -6,11 +6,11 @@ export default async function cityHouses(res) {
   console.log('CITY HOUSES')
 
   const replies = []
-  if (res.raw.entities.location) {
+  if (res.entities.location) {
     console.log('======================================')
-    console.log(res.raw.entities.location[0].raw)
+    console.log(res.entities.location[0].raw)
     console.log('======================================')
-    const city = res.raw.entities.location[0].raw
+    const city = res.entities.location[0].raw
     replies.push(formatter.formatMsg(`OK, looking for houses in ${city}`))
     const properties = await salesforce.findProperties({ city })
     if (properties.length) {

@@ -6,12 +6,12 @@ export default async function findBedrooms(res) {
   console.log('FIND BEDRROMS')
 
   const replies = []
-  const city = res.raw.entities.location ? res.raw.entities.location[0].raw : null
-  const bedrooms = parseInt(res.raw.entities.location ? res.raw.entities.bedrooms[0].raw : null, 10)
-  if (res.raw.entities.number && city) {
-    if (res.raw.entities.number.length === 2) {
-      const priceMin = res.raw.entities.number[0].scalar
-      const priceMax = res.raw.entities.number[1].scalar
+  const city = res.entities.location ? res.entities.location[0].raw : null
+  const bedrooms = parseInt(res.entities.location ? res.entities.bedrooms[0].raw : null, 10)
+  if (res.entities.number && city) {
+    if (res.entities.number.length === 2) {
+      const priceMin = res.entities.number[0].scalar
+      const priceMax = res.entities.number[1].scalar
       replies.push(formatter.formatMsg(`OK, looking for houses between ${priceMin} and ${priceMax} in ${city} with ${bedrooms} bedrooms`))
       const properties = await salesforce.findProperties({ priceMin, priceMax, city, bedrooms })
       if (properties.length) {
@@ -28,10 +28,10 @@ export default async function findBedrooms(res) {
         replies.push(formatter.formatMsg(`Couldn't find any houses in ${city} with ${bedrooms} bedrooms`))
       }
     }
-  } else if (res.raw.entities.number) {
-    if (res.raw.entities.number.length === 2) {
-      const priceMin = res.raw.entities.number[0].scalar
-      const priceMax = res.raw.entities.number[1].scalar
+  } else if (res.entities.number) {
+    if (res.entities.number.length === 2) {
+      const priceMin = res.entities.number[0].scalar
+      const priceMax = res.entities.number[1].scalar
       replies.push(formatter.formatMsg(`OK, looking for houses between ${priceMin} and ${priceMax} with ${bedrooms} bedrooms`))
       const properties = await salesforce.findProperties({ priceMin, priceMax, bedrooms })
       if (properties.length) {

@@ -1,7 +1,7 @@
 /* module improts */
 import handleAction from './actions'
 import uploads from './uploads'
-import { Client } from 'recastai'
+import { request } from 'recastai'
 
 const req = new request(process.env.REQUEST_TOKEN, process.env.LANGUAGE)
 
@@ -15,20 +15,20 @@ export async function replyMessage(message) {
 
     let payload = ''
     let replies = []
-    if (message.content.attachment.type === 'picture') {
-      replies = await uploads(message.content.attachment)
+    if (message.type === 'picture') {
+      replies = await uploads(message.attachment)
     } else {
-      if (message.content.attachment.type === 'payload') {
-        payload = JSON.parse(message.content.attachment.content)
+      if (message.type === 'payload') {
+        payload = JSON.parse(message.content)
         text = payload.text
       } else {
-        text = message.content.attachment.content
+        text = message.content
       }
       const res = await req.converseText(text, { conversationToken: senderId })
       console.log('RECAST ANSWER', res)
-      replies = await handleAction(res, payload)
+      replies = await handleAction(res, payload, message)
+      replies.forEach(reply => message.addReply(reply))
     }
-    replies.forEach(reply => message.addReply(reply))
 
     await message.reply()
   } catch (err) {

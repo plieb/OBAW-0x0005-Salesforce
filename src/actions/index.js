@@ -9,13 +9,13 @@ const actions = {
   'confirm-visit': require('./confirm-visit'),
 }
 
-export default function handleAction(res, payload, message) {
+export default async function handleAction(res, payload, message) {
   const currentAction = res.action && res.action.slug
   console.log(currentAction)
   let replies = []
   if (actions[currentAction]) {
     console.log('Enter action')
-    replies = actions[currentAction].default(res, payload, message)
+    replies = await actions[currentAction].default(res, payload, message)
   } else if (res.reply()) {
     replies.push({
       type: 'text',
