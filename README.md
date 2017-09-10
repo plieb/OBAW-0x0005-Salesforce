@@ -70,7 +70,7 @@ If you haven't already done so, follow the steps below to create a Salesforce co
 
 ## Author
 
-PE Lieb [@pedward_lieb](https://twitter.com/pedward_lieb)
+PE Lieb [@liebpe](https://twitter.com/liebpe)
 
 You can follow us on Twitter at [@recastai](https://twitter.com/recastai) for updates and releases.
 
